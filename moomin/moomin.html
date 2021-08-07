@@ -56,7 +56,7 @@ button{
 }
             /*-------------------- nav --------------------*/
     nav{
-        width: 80%;
+        width: 90%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -88,22 +88,25 @@ button{
 .mainBannerWrap{
     width: 100%;
     height: 60%;
-    background-image: url("./moomin/moomin img/mainBannerBgc.png");
+    background-image: url("./moomin img/mainBannerBgc.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center 100%;
+    display: flex;
+    align-items: center;
 
 }
 
 .mainBanner{
     width: 100%;
-    height: 80%;
+    /* height: 80%; */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    /* align-self: center; */
     align-items: center;
-    padding-top: 5%;
+    padding: 5%;
 
 }
 
@@ -111,11 +114,14 @@ button{
     font-family: 'Indie Flower', cursive;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-align: center;
 }
 .mainBanner img{
-    width: 40rem;
+    width: 20rem;
+    margin: auto;
+    display: flex;
+    margin-bottom: 16px;
 }
 
 .mainBanner button{
@@ -131,6 +137,71 @@ button{
     /* height: 50%; */
 }
 
+/*---------------   lastest news   ---------------*/
+.latestNews{
+    margin: auto;
+
+    /* 幫助按鈕推中間 */
+    display: flex;
+    flex-direction: column;
+
+
+}
+            /*-------------------- latest news header --------------------*/
+.newsHeaderWrap{
+    padding: 10px;
+}
+.newsHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    ;
+    /* border: solid 1px; */
+    /* text-align: center; */
+}
+.newsHeader img{
+    display: none;
+}
+
+            /*--------------------latest News cards --------------------*/
+.newsBody{
+    border: 1px solid;
+    text-align: center;
+}
+
+            /*--------------------latest News button --------------------*/
+.latestNews button{
+    margin: auto;
+}
+
+/*---------------  輪播   ---------------*/
+#carouselExampleIndicators{
+    width: 60%;
+    margin: 20px auto;
+    /* border: 1px red solid; */
+}
+
+/*---------------  stamps   ---------------*/
+.stampWrap{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    border: 2px solid red;
+    /* width: 60%; */
+}
+
+.twoSmallStamps{
+    display: flex;
+    /* width: 30%; */
+    border: black 2px solid;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+
+
+
+
 
 
 
@@ -142,8 +213,25 @@ button{
     nav .logo img{
         width: 300px;   
     }
+    nav{
+        width: 80%;
+    }
+
+    /*---------- main banner ----------*/
+    .mainBanner img{
+        width: 30rem;
+    }
+
+
+
+    /*---------- latest News ----------*/
+    .newsHeader img{
+        display: flex;
+        width: 90%;
+    }
 
 }
+
 
 
 
@@ -157,6 +245,9 @@ button{
     .burgerBtn, .searchIcon{
         display: none;
 
+    }
+    nav{
+        width: 80%;
     }
     
     nav .menu{
@@ -180,6 +271,20 @@ button{
         margin-bottom: 16px;
     }
 
+    /*---------- main banner ----------*/
+    .mainBanner img{
+        width: 35rem;
+    }
+
+    /*---------- latest News ----------*/
+    .newsHeader img{
+        display: flex;
+        width: 90%;
+    }
+    .latestNews img{
+        min-width: 200px;
+    }
+
 
 }
 
@@ -190,6 +295,8 @@ button{
 
 
 <!----------------- header ----------------->
+    <!------------- Be our Member ------------->
+
 <header>
     <div class="joinMemWrap">
         <div class="joinMem">
@@ -199,14 +306,14 @@ button{
         </div>
     </div>
 
-
+    <!------------- NAV ------------->
     <nav>
         <div class="burgerBtn">
             <i class="fas fa-bars"></i>
         </div>
 
         <div class="Logo">
-            <img src="./moomin/moomin img/headerLogo.png" alt="">
+            <img src="./moomin img/headerLogo.png" alt="">
         </div>
 
         <div class="menu">
@@ -238,7 +345,7 @@ button{
                 THE WONDERFUL WORLD OF</p>
         </div>
 
-        <div class="Logo"> <img src=".//moomin/moomin img/mainBannerLogo.png" alt=""></div>
+        <div class="Logo"> <img src="./moomin img/mainBannerLogo.png" alt=""></div>
 
         <div class="buttonWrap">
             <button class="explore">前往探索吧!</button>
@@ -248,12 +355,123 @@ button{
 
 </div>
 <!----------------- Latest News ----------------->
+    <!------------- Latest News header ------------->
 <div class="latestNews">
-    <div class="newsHeader">
-        <img src="" alt="">
-        <h1></h1>
+    <div class="newsHeaderWrap container">
+        <div class="row">
+                <div class="newsHeader col-sm">
+                    <img src="./moomin img/latest news.png" alt=""></div>
+                <div class="newsHeader col-sm">
+                    <h2>最新消息</h2>
+                </div>
+                <div class="newsHeader col-sm"></div>
+
+        </div>
     </div>
+    <!------------- Latest News article ------------->
+    <div class="latestNewsArticle container">
+        <div class="news row">
+            <div class="card-deck mx-3 my-3">
+                <div class="card">
+                  <img src="./moomin img/latest news article1.jpeg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h6 class="card-title">
+                        什麼是嚕嚕米日？＃嚕嚕米鐵粉必知｜8月9日全球MOOMIN’S
+                    </h6>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">
+                        <span>MOOMIN TW · </span> 
+                        31 Jul, 2021
+                    </small>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="./moomin img/latest news article2.jpeg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h6 class="card-title">嚕嚕米控必看！這次夏祭限定商品你收了沒？身為資深Moomin</h6>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">
+                        <span>MOOMIN TW · </span> 
+                        17 Jul, 2021
+                    </small>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="./moomin img/latest news article3.jpeg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h6 class="card-title">第一本MOOMIN圖畫書是一本備受讚譽的突破。朵貝 · 楊笙</h6>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">
+                        <span>MOOMIN TW · </span> 
+                        16 Jul, 2021
+                    </small>
+                  </div>
+                </div>
+              </div>
+
+        </div>
+    </div>
+    <!------------- Latest News button ------------->
+    <button type="button" class="btn btn-success">Read More</button>
 </div>
+<!----------------- 輪播 ----------------->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./moomin img/Carousel-01.gif" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./moomin img/Carousel-02.jpeg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./moomin img/Carousel-03.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./moomin img/Carousel-04.png" class="d-block w-100" alt="...">
+      </div>
+
+
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+
+    <!------------- stamps ------------->
+    <div class="stampWrap">
+
+        <div class="smallStampWrap">
+
+            <div class="twoSmallStamps">
+                <div class="characters stamp"><img src="./moomin img/stamps-characters.png" alt=""></div>
+                <div class="history stamp"><img src="./moomin img/stamps-history.png" alt=""></div>
+            </div>
+
+            <div class="store stamp"><img src="./moomin img/stamps-store.png" alt="">
+            </div>
+        </div>
+
+        <div class="bigStamp"></div>
+        <div class="mem stamp "><img src="./moomin img/stamps-mem.png" alt=""></div>
+    </div>   
+
+    
+
 
 
 
