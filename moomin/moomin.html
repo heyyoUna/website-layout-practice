@@ -1,0 +1,266 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Josefin+Sans:ital,wght@0,300;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+<style>
+/*---------------    通則   ---------------*/
+*{
+   font-family: 'Josefin Sans', sans-serif, 'Roboto', inherit;
+}
+
+button{
+    border-radius: 10px;
+    padding: 2px 8px;
+    border: none;
+}
+
+/*---------------   header   ---------------*/
+
+            /*-------------------- Be our Member --------------------*/
+
+.joinMemWrap{
+    width: 100%;
+    background-color: #1DB6B0;
+
+}            
+.joinMem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-wrap: wrap;
+    text-align: center;
+
+}
+
+.joinMem button{
+    margin: 8px 5px;
+    cursor: pointer;
+
+}
+
+.joinMem p{
+    color: white;
+    margin: auto 20px;
+}
+
+.joinMem i{
+    color: white;
+}
+            /*-------------------- nav --------------------*/
+    nav{
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+    }
+
+
+
+    nav .logo img{
+        width: 250px;
+        margin: auto;
+        
+    }
+
+    nav .menu, nav .memIcon{
+        display: none;
+
+    }
+
+
+    nav .searchIcon i{
+        padding: 15px;
+        border-radius: 50%;
+        background-color: #7BCED2;
+        color: white;
+        
+    }
+/*---------------   Main Banner   ---------------*/
+.mainBannerWrap{
+    width: 100%;
+    height: 60%;
+    background-image: url("./moomin/moomin img/mainBannerBgc.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center 100%;
+
+}
+
+.mainBanner{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 5%;
+
+}
+
+.mainBannerText{
+    font-family: 'Indie Flower', cursive;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.mainBanner img{
+    width: 40rem;
+}
+
+.mainBanner button{
+    background-color: #ED8011;
+    color: white;
+    padding: 4px 15px;
+    margin: auto 20px;
+}
+
+.mainBanner .buttonWrap{
+    display: flex;
+    align-items: flex-end;
+    /* height: 50%; */
+}
+
+
+
+
+
+/*---------------   RWD   ---------------*/
+@media (min-width: 768px){
+
+    /*---------- header ----------*/
+    nav .logo img{
+        width: 300px;   
+    }
+
+}
+
+
+
+@media (min-width: 1200px){
+
+    /*---------- header ----------*/
+    nav .logo img{
+        width: 300px;   
+    }
+
+    .burgerBtn, .searchIcon{
+        display: none;
+
+    }
+    
+    nav .menu{
+        width: 40%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
+    nav .memIcon{
+        display: flex;
+        padding: 15px;
+        border-radius: 50%;
+        background-color: #7BCED2;
+        color: white;
+        
+    }
+
+    nav .searchIconDesk{
+        margin-bottom: 16px;
+    }
+
+
+}
+
+</style>
+
+</head>
+<body>
+
+
+<!----------------- header ----------------->
+<header>
+    <div class="joinMemWrap">
+        <div class="joinMem">
+            <i class="fas fa-bell"></i>
+            <p>按我成為 MOOMIN 家族會員</p>
+            <button>加入會員!</button>
+        </div>
+    </div>
+
+
+    <nav>
+        <div class="burgerBtn">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="Logo">
+            <img src="./moomin/moomin img/headerLogo.png" alt="">
+        </div>
+
+        <div class="menu">
+            <p>認識MOOMIN <i class="fas fa-caret-down"></i></p>
+            <p>文章集錦 <i class="fas fa-caret-down"></i></p>
+            <p>官方商城</p>
+            <p>期間限定店</p>
+            <i class="fas fa-search searchIconDesk"></i>
+        </div>
+
+
+        <div class="searchIcon">
+            <i class="fas fa-search"></i>
+        </div>
+
+        <div class="memIcon">
+            <i class="fas fa-user"></i>
+        </div>
+    </nav>
+
+</header>
+
+<!----------------- Main banner ----------------->
+<div class="mainBannerWrap">
+    <div class="mainBanner">
+
+        <div class="mainBannerText">
+            <p>Hello! WELCOME TO <br>
+                THE WONDERFUL WORLD OF</p>
+        </div>
+
+        <div class="Logo"> <img src=".//moomin/moomin img/mainBannerLogo.png" alt=""></div>
+
+        <div class="buttonWrap">
+            <button class="explore">前往探索吧!</button>
+            <button class="shop">參觀商店!</button>
+        </div>
+    </div>
+
+</div>
+<!----------------- Latest News ----------------->
+<div class="latestNews">
+    <div class="newsHeader">
+        <img src="" alt="">
+        <h1></h1>
+    </div>
+</div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
